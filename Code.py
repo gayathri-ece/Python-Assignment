@@ -67,10 +67,10 @@ if __name__=="__main__":
              logging.error('Error : File not found and Excel format file is only supported\n')
          elif(os.path.isfile(filename)==False):
              logging.error('Error : File not found\n')
-         elif(os.path.isfile(filename)==False and '.xlsx' not in filename):
+         elif('.xlsx' not in filename):
              logging.error('Error : Excel format file is only supported\n')
          filename=input("Enter File Name : ")   
-    logging.info("Filename is Accepted\n")
+    logging.info("Filename is {} Accepted\n".format(filename))
 
     # Taking Total marks per each subject as float input
     q=True
@@ -84,7 +84,7 @@ if __name__=="__main__":
                  logging.error('Error : Total marks of each Subject cannot be negative or zero\n')
              else:
                  q=False
-    logging.info("Total Marks entered is Accepted\n")
+    logging.info("Total Marks entered = {} is Accepted\n".format(total_per_each))
 
 
     # Passing file name and total marks per each subject as    
